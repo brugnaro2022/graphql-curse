@@ -1,10 +1,15 @@
+let id = 1;
+function proximoId() {
+  return id++;
+}
+
 const perfis = [
   { id: 1, nome: 'comum' },
   { id: 2, nome: 'administrador' }
 ];
 
 const usuarios = [{
-  id: 1,
+  id: proximoId(),
   nome: 'João Silva',
   email: 'jsilva@zemail.com',
   idade: 29,
@@ -12,7 +17,7 @@ const usuarios = [{
   status: 'ATIVO'
 },
 {
-  id: 2,
+  id: proximoId(),
   nome: 'Rafael Junior',
   email: 'rafajun@wemail.com',
   idade: 31,
@@ -20,7 +25,7 @@ const usuarios = [{
   status: 'INATIVO'
 },
 {
-  id: 3,
+  id: proximoId(),
   nome: 'Daniela Smith',
   email: 'danismi@uemail.com',
   idade: 24,
@@ -28,4 +33,8 @@ const usuarios = [{
   status: 'BLOQUEADO'
 }];
 
-module.exports = { usuarios, perfis };
+module.exports = {
+  usuarios,
+  perfis,
+  proximoId
+};
