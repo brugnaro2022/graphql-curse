@@ -1,7 +1,7 @@
 const db = require('../../config/db')
 
 module.exports = {
-  async perfis(usuario) {
+  perfis(usuario) {
     return db('perfis')
       .join(
         'usuarios_perfis',
